@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>每日一句聖經經文</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', '微軟正黑體', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    h1 {
+      font-weight: 300;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    #verse-box {
+      background: #ffffff;
+      padding: 2rem;
+      margin-top: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 1rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      font-size: 1.25rem;
+    }
+    button {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #357ab8;
+    }
+  </style>
+</head>
+<body>
+  <h1>📖 隨機聖經經文</h1>
+  <button onclick="showVerse()">抽一句</button>
+  <div id="verse-box">點上方按鈕，獲得一句來自上帝的話語</div>
+
+  <script>
+    const verses = [
+      "神愛世人，甚至將他的獨生子賜給他們。——約翰福音 3:16",
+      "你要專心仰賴耶和華，不可倚靠自己的聰明。——箴言 3:5",
+      "耶和華是我的牧者，我必不致缺乏。——詩篇 23:1",
+      "在患難之日，我要求告你，因你必應允我。——詩篇 86:7",
+      "我留下平安給你們，我將我的平安賜給你們。——約翰福音 14:27",
+      "萬事都互相效力，叫愛神的人得益處。——羅馬書 8:28",
+      "不要效法這個世界，只要心意更新而變化。——羅馬書 12:2",
+      "因信稱義，是本乎恩，也因著信。——以弗所書 2:8",
+      "要常常喜樂，不住地禱告，凡事謝恩。——帖撒羅尼迦前書 5:16-18",
+      "你不要害怕，因為我與你同在。——以賽亞書 41:10",
+      "你們中間誰願為大，就必作你們的用人。——馬太福音 20:26",
+      "耶穌說：我是道路、真理、生命。——約翰福音 14:6"
+    ];
+
+    function showVerse() {
+      const index = Math.floor(Math.random() * verses.length);
+      document.getElementById("verse-box").innerText = verses[index];
+    }
+  </script>
+</body>
+</html>
